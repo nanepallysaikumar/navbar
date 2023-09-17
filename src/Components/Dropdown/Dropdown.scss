@@ -1,0 +1,31 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+
+  .dropdown-header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    svg {
+      color: gray;
+      font-size: 14px;
+    }
+  }
+
+  .dropdown-options {
+    background-color: #fff;
+    font-size: 14px;
+  }
+
+  .option {
+    padding: 1px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}

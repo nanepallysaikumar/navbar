@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { VerticalNavbar } from './Components/VerticalNavbar/VerticalNavbar';
+import { Content } from './Container/Content';
+import { faCoffee, faLink, faRocket, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import './App.scss';
 
 function App() {
+  const navLinks = [
+    { to: "/", name: "Connect", icon: faCoffee },
+    { to: "/analyze", name: "Analyze", icon: faMagnifyingGlass },
+    { to: "/integrate", name: "Integrate", icon: faLink },
+    { to: "/deploy", name: "Deploy", icon: faRocket },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      <VerticalNavbar links={navLinks}/>
+      <Content />
     </div>
   );
 }
